@@ -4,6 +4,7 @@ echo "=====Jail?====="
 read jail
 echo "=====IP?====="
 read ip
+cat $ip > /usr/local/sbin/whitlist
 #f2b command
 fail2ban-client set $jail unbanip $ip
 
